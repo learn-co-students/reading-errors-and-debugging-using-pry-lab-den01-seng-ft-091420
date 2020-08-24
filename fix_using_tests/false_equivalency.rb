@@ -1,8 +1,6 @@
 # don't forget to add: require 'pry'
 
-def get_user_input
-  gets.chomp
-end
+require 'pry'
 
 def prompt_user
   puts "What would you like to do?"
@@ -10,15 +8,17 @@ def prompt_user
   puts "2.) Eat a ham."
 end
 
-def selection(num)
-  if num = 1
-     "YUM YUM MUNCH MUNCH MUNCH"
-  elsif num = 2
-     "HAM HAM HAM IN MY TUMMY"
-  end
+def get_user_input
+  gets.chomp
 end
 
-def runner
-  prompt_user
-  selection(get_user_input)
+def selection(get_user_input)
+  if get_user_input == 1
+     x = "YUM YUM MUNCH MUNCH MUNCH"
+     return x
+  end
+  if get_user_input == 2
+     y = "HAM HAM HAM IN MY TUMMY"
+     return y
+  end
 end
